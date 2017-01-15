@@ -46,6 +46,13 @@
           },
           "slug": "installation",
           "url": "https://tweedjs.github.io/docs/getting-started/installation.json"
+        },
+        {
+          "headers": {
+            "title": "Tweed CLI"
+          },
+          "slug": "cli",
+          "url": "https://tweedjs.github.io/docs/getting-started/cli.json"
         }
       ]
     },

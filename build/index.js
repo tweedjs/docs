@@ -232,6 +232,17 @@ function highlight (code, language) {
 
     case 'shell':
       return prism(code, languages.bash)
+        .split('\n')
+        .map((line) => {
+          const prompt = /^\$\s*/
+
+          if (!prompt.test(line)) {
+            return line
+          }
+
+          return line.replace(prompt, '<span class="shell-prompt"></span>')
+        })
+        .join('\n')
 
     case 'html':
       return prism(code, languages.markup)

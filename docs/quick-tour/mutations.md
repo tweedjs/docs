@@ -51,7 +51,7 @@ class Counter {
     return (
       <button on-click={() => this._count++}>
         You have pressed this button {this._count} times
-      </button
+      </button>
     )
   }
 }

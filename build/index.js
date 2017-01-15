@@ -188,7 +188,8 @@ const keywords = [
 languages.tweed.keyword = new RegExp(`\\b(${keywords.join('|')})\\b`)
 
 languages.tweed['class-name'] = {
-  pattern: /\b[A-Z]\w*/
+  pattern: /(:\s*)\b[A-Z]\w*/,
+  lookbehind: true
 }
 
 languages.tweed.annotation = {

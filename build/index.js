@@ -187,8 +187,12 @@ const keywords = [
 
 languages.tweed.keyword = new RegExp(`\\b(${keywords.join('|')})\\b`)
 
+languages.tweed['class-name'] = {
+  pattern: /\b[A-Z]\w*/
+}
+
 languages.tweed.annotation = {
-  pattern: /@\w+/
+  pattern: /@[\w.]+/
 }
 
 function codeBlock (code, language) {

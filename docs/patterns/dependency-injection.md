@@ -1,3 +1,3 @@
-Name: Dependency Injection
+Title: Dependency Injection
 
 WIP

@@ -1,3 +1,3 @@
-Name Object Oriented Design
+Title: Object Oriented Design
 
 WIP

@@ -192,7 +192,7 @@ languages.tweed['class-name'] = {
 }
 
 languages.tweed.plain = [{
-  pattern: /(<(?!\/)[^>{]+)>(?:(?!<\/)[^{])*/,
+  pattern: /(<(?!\/)[^>{]+>)(?:(?!<\/)[^{])*/,
   lookbehind: true,
   greedy: true
 }, {
@@ -200,7 +200,7 @@ languages.tweed.plain = [{
   lookbehind: true,
   greedy: true
 }, {
-  pattern: /(})[^{]*(?=<\/)/,
+  pattern: /(})[^}{]*(?=<\/)/,
   lookbehind: true,
   greedy: true
 }]

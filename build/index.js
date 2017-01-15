@@ -233,6 +233,9 @@ function highlight (code, language) {
     case 'shell':
       return prism(code, languages.bash)
 
+    case 'html':
+      return prism(code, languages.markup)
+
     default:
       throw new Error(`Cannot highlight ${language}`)
   }

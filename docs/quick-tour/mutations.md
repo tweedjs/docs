@@ -72,7 +72,7 @@ class AlertBox {
 
   render () {
     if (!this._isOpen) {
-      return null
+      return <div>Closed</div>
     }
 
     return (
@@ -91,9 +91,9 @@ class AlertBox {
   @mutating private _isOpen = true
   readonly private _message = 'This is an alert'
 
-  render (): Node | null {
+  render (): Node {
     if (!this._isOpen) {
-      return null
+      return <div>Closed</div>
     }
 
     return (

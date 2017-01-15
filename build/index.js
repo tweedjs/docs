@@ -25,6 +25,7 @@ async function main () {
       yaml.load(await readFile(resolve(dirSectionDocs, '_index.yaml')))
     const index = {
       name,
+      slug: section,
       description: description.trim(),
       subsections: []
     }
@@ -41,6 +42,7 @@ async function main () {
 
       index.subsections.push({
         headers,
+        slug: subsection,
         url: url(distFile)
       })
     }

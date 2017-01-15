@@ -2,24 +2,28 @@
   "sections": [
     {
       "name": "Quick Tour",
+      "slug": "quick-tour",
       "description": "A simple tour of the library. This section does not document setting up your environment or tooling or anything like that. All examples come with links to JSFiddle.",
       "subsections": [
         {
           "headers": {
             "title": "Welcome to Tweed"
           },
+          "slug": "welcome",
           "url": "https://tweedjs.github.io/docs/quick-tour/welcome.json"
         },
         {
           "headers": {
             "title": "JSX and Virtual DOM"
           },
+          "slug": "jsx-and-vdom",
           "url": "https://tweedjs.github.io/docs/quick-tour/jsx-and-vdom.json"
         },
         {
           "headers": {
             "title": "Hello World"
           },
+          "slug": "hello-world",
           "url": "https://tweedjs.github.io/docs/quick-tour/hello-world.json"
         }
       ]

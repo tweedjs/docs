@@ -39,19 +39,41 @@
       "name": "Getting Started",
       "slug": "getting-started",
       "description": "A full tutorial on setting up Tweed using the CLI, and the process of developing, building, and deploying applications. WIP.",
-      "subsections": []
+      "subsections": [
+        {
+          "headers": {
+            "name": "Installation"
+          },
+          "slug": "installation",
+          "url": "https://tweedjs.github.io/docs/getting-started/installation.json"
+        }
+      ]
     },
     {
       "name": "Patterns",
       "slug": "patterns",
       "description": "A compilation of design patterns and architectural approaches to building Tweed applications to keep them clean, decoupled, and testable. WIP.",
-      "subsections": []
+      "subsections": [
+        {
+          "headers": {
+            "name": "Dependency Injection"
+          },
+          "slug": "dependency-injection",
+          "url": "https://tweedjs.github.io/docs/patterns/dependency-injection.json"
+        }
+      ]
     },
     {
       "name": "Philosophy",
       "slug": "philosophy",
       "description": "An in depth discussion of why Tweed exists and what problem it aims to solve. Also, this series discusses some ideas about the architecture of a Tweed app. WIP.",
-      "subsections": []
+      "subsections": [
+        {
+          "headers": {},
+          "slug": "object-oriented-design",
+          "url": "https://tweedjs.github.io/docs/philosophy/object-oriented-design.json"
+        }
+      ]
     }
   ]
 }

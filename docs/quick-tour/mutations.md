@@ -148,7 +148,7 @@ class InputField {
       <div>
         <input
           value={this.value}
-          on-input={(event: Event) =>{
+          on-input={(event: Event) => {
             const input: HTMLInputElement = event.target
 
             this.value = input.value

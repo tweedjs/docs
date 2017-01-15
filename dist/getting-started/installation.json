@@ -1,4 +1,4 @@
 {
-  "html": "<p>WIP</p>\n",
+  "html": "<p>Installing Tweed could not be simpler. All you need is an up to date version of\n<a href=\"https://nodejs.org/en/download/\" title=\"Download NodeJS\">Node</a>. Since Tweed is a library rather than a framework, you don&#39;t <em>need</em> to use\nany boilerplate project or to generate a project with the CLI. Just install Tweed in your\nproject and start using it.</p>\n<pre><code>$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> --save tweed</code></pre>",
   "examples": []
 }

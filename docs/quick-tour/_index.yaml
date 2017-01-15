@@ -1,0 +1,8 @@
+section: Quick Tour
+description: >
+  A simple tour of the library. This section does not document setting up your environment
+  or tooling or anything like that. All examples come with links to JSFiddle.
+subsections:
+  - welcome
+  - jsx-and-vdom
+  - hello-world

@@ -3,7 +3,6 @@ Title: Hello World
 Armed with the knowledge of how JSX works, let's look at the Hello World example of a
 Tweed application:
 
-<multi-lang>
 ```tweed
 import { Node } from 'tweed'
 import render from 'tweed/render/dom'
@@ -27,7 +26,6 @@ class Hello implements NodeFactory {
 
 render(new Hello(), document.querySelector('#app'))
 ```
-</multi-lang>
 
 So let's break this down. First, we import the `Node` function, as well as the `render`
 function, which will mount the Tweed app in the browser.

@@ -6,3 +6,4 @@ subsections:
   - welcome
   - jsx-and-vdom
   - hello-world
+  - mutations

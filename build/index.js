@@ -201,7 +201,7 @@ languages.tweed.plain = [{
   lookbehind: true,
   greedy: true
 }, {
-  pattern: /j})[^}{]*(?=<\/)/,
+  pattern: /(})[^}{]*(?=<\/)/,
   lookbehind: true,
   greedy: true
 }]

@@ -42,7 +42,7 @@
       "subsections": [
         {
           "headers": {
-            "name": "Installation"
+            "title": "Installation"
           },
           "slug": "installation",
           "url": "https://tweedjs.github.io/docs/getting-started/installation.json"
@@ -56,7 +56,7 @@
       "subsections": [
         {
           "headers": {
-            "name": "Dependency Injection"
+            "title": "Dependency Injection"
           },
           "slug": "dependency-injection",
           "url": "https://tweedjs.github.io/docs/patterns/dependency-injection.json"
@@ -69,7 +69,9 @@
       "description": "An in depth discussion of why Tweed exists and what problem it aims to solve. Also, this series discusses some ideas about the architecture of a Tweed app. WIP.",
       "subsections": [
         {
-          "headers": {},
+          "headers": {
+            "title": "Object Oriented Design"
+          },
           "slug": "object-oriented-design",
           "url": "https://tweedjs.github.io/docs/philosophy/object-oriented-design.json"
         }

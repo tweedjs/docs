@@ -81,9 +81,9 @@ import { Node } from 'tweed'
 const pic = <img src='...' />
 ```
 
-> If you're not worried about polluting the global scope, you can assign the `Node`
-> function to the global object in the entry point file. That way the function will be
-> available in every file, making the import statements redundant.
+> **Note:** If you're not worried about polluting the global scope, you can assign the
+> `Node` function to the global object in the entry point file. That way the function
+> will be available in every file, making the import statements redundant.
 
 ### Object attributes
 Some special attributes accept objects instead of strings. If you pass an object to the

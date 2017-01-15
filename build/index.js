@@ -123,13 +123,15 @@ function codeBlock (code, language) {
 }
 
 function codeSpan (code) {
-  return `<code>${highlight(code, languages.tweed)}</code>`
+  return `<code>${highlight(code)}</code>`
 }
 
 function highlight (code, language) {
   switch (language) {
     case 'javascript':
     case 'typescript':
+    case null:
+    case undefined:
       return prism(code, languages.tweed)
 
     default:

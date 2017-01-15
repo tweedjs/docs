@@ -77,7 +77,7 @@ class AlertBox {
 
     return (
       <div>
-        <p>{this._message}</p>
+        <span>{this._message}</span>
 
         <button on-click={() => this._isOpen = false}>
           ×
@@ -98,7 +98,7 @@ class AlertBox {
 
     return (
       <div>
-        <p>{this._message}</p>
+        <span>{this._message}</span>
 
         <button on-click={() => this._isOpen = false}>
           ×

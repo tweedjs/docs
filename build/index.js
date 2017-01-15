@@ -2,7 +2,6 @@ const { resolve } = require('path')
 const yaml = require('js-yaml')
 const marked = require('marked')
 const {
-  readdirAsync: readdir,
   mkdirsAsync: mkdirs,
   readFileAsync: readFile,
   writeFileAsync: writeFile
@@ -18,7 +17,10 @@ async function main () {
 
   await mkdirs(dirDist)
 
-  for (const section of await readdir(dirDocs)) {
+  const { sections } =
+    yaml.load(await readFile(resolve(dirDocs, '_index.yaml')))
+
+  for (const section of sections) {
     const dirSectionDocs = resolve(dirDocs, section)
     const dirSectionDist = resolve(dirDist, section)
     const { section: name, description, subsections } =

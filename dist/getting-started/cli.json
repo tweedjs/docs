@@ -1,4 +1,4 @@
 {
-  "html": "<p>The easiest and quickest way to get up and running with Tweed is to use the CLI. It&#39;s a\none-time global install. You&#39;ll have a working app in 20 seconds.</p>\n<pre><code>$ <span class=\"token function\">npm</span> <span class=\"token function\">install</span> --global tweed-cli\n$ tweed new my-first-project</code></pre>",
+  "html": "<p>The easiest and quickest way to get up and running with Tweed is to use the CLI. It&#39;s a\none-time global install. You&#39;ll have a working app in 20 seconds.</p>\n<pre><code><span class=\"shell-prompt\"></span><span class=\"token function\">npm</span> <span class=\"token function\">install</span> --global tweed-cli\n<span class=\"shell-prompt\"></span>tweed new my-first-project</code></pre>",
   "examples": []
 }

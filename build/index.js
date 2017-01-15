@@ -99,6 +99,8 @@ function compileMarkdown (source) {
     return codeBlock(code, language)
   }
 
+  renderer.codespan = codeSpan
+
   const html = marked(source, { renderer })
 
   return { html, examples }
@@ -118,6 +120,10 @@ languages.tweed.annotation = {
 
 function codeBlock (code, language) {
   return `<pre><code>${highlight(code, language)}</code></pre>`
+}
+
+function codeSpan (code) {
+  return `<code>${highlight(code, languages.tweed)}</code>`
 }
 
 function highlight (code, language) {

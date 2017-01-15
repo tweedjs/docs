@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "fs-extra-promise": "^0.4.1",
+    "html-entities": "^1.2.0",
     "js-yaml": "^3.7.0",
     "marked": "^0.3.6",
     "prismjs": "^1.6.0"

@@ -111,6 +111,9 @@ require('prismjs/components/prism-clike')
 require('prismjs/components/prism-javascript')
 require('prismjs/components/prism-markup')
 require('prismjs/components/prism-jsx')
+const { XmlEntities } = require('html-entities')
+
+const entities = new XmlEntities()
 
 languages.tweed = languages.extend('jsx')
 
@@ -123,7 +126,7 @@ function codeBlock (code, language) {
 }
 
 function codeSpan (code) {
-  return `<code>${highlight(code)}</code>`
+  return `<code>${highlight(entities.decode(code))}</code>`
 }
 
 function highlight (code, language) {

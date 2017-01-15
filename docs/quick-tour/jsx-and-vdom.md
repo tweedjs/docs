@@ -136,4 +136,3 @@ const button = <button on-click={clickHandler}>Click me!</button>
 
 > **Note:** All the object attributes support this syntax. `class-my-class=`,
 > `style-marginTop=`, and `on-mouseover=` are all valid.
-```

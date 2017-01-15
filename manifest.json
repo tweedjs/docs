@@ -25,6 +25,13 @@
           },
           "slug": "hello-world",
           "url": "https://tweedjs.github.io/docs/quick-tour/hello-world.json"
+        },
+        {
+          "headers": {
+            "title": "Mutations"
+          },
+          "slug": "mutations",
+          "url": "https://tweedjs.github.io/docs/quick-tour/mutations.json"
         }
       ]
     }

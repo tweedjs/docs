@@ -188,7 +188,7 @@ const keywords = [
 languages.tweed.keyword = new RegExp(`\\b(${keywords.join('|')})\\b`)
 
 languages.tweed['class-name'] = {
-  pattern: /(:|class|interface|type|import(?:\s*\{[^}]*?)?)\s*\b[A-Z]\w*/,
+  pattern: /(:|class|interface|type|implements|extends|<|import|{|,)\s*\b[A-Z]\w*/,
   lookbehind: true
 }
 

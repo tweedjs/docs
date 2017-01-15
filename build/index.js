@@ -215,7 +215,7 @@ languages.tweed.annotation = {
 }
 
 function codeBlock (code, language) {
-  return `<pre><code>${highlight(code, language)}</code></pre>`
+  return `<pre><code class="lang-${language}">${highlight(code, language)}</code></pre>`
 }
 
 function codeSpan (code) {

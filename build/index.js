@@ -90,13 +90,13 @@ function compileMarkdown (source) {
       const [ js, ts ] = code.split(/\s*---\s*/)
 
       examples.push({
-        javascript: highlight(js, 'javascript'),
-        typescript: highlight(ts, 'typescript')
+        javascript: codeBlock(js, 'javascript'),
+        typescript: codeBlock(ts, 'typescript')
       })
 
       return '<example-slot></example-slot>'
     }
-    return highlight(code, language)
+    return codeBlock(code, language)
   }
 
   const html = marked(source, { renderer })
@@ -114,6 +114,10 @@ languages.tweed = languages.extend('jsx')
 
 languages.tweed.annotation = {
   pattern: /@\w+/
+}
+
+function codeBlock (code, language) {
+  return `<pre><code>${highlight(code, language)}</code></pre>`
 }
 
 function highlight (code, language) {

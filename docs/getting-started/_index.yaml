@@ -2,4 +2,5 @@ section: Getting Started
 description: >
   A full tutorial on setting up Tweed using the CLI, and the process of developing,
   building, and deploying applications. WIP.
-subsections: []
+subsections:
+  - installation

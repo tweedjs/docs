@@ -4,3 +4,4 @@ description: >
   building, and deploying applications. WIP.
 subsections:
   - installation
+  - cli

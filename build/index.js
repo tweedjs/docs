@@ -115,6 +115,8 @@ require('prismjs/components/prism-markup')
 require('prismjs/components/prism-jsx')
 const { XmlEntities } = require('html-entities')
 
+require('prismjs/components/prism-bash')
+
 const entities = new XmlEntities()
 
 languages.tweed = languages.extend('jsx')
@@ -227,6 +229,9 @@ function highlight (code, language) {
     case null:
     case undefined:
       return prism(code, languages.tweed)
+
+    case 'shell':
+      return prism(code, languages.bash)
 
     default:
       throw new Error(`Cannot highlight ${language}`)

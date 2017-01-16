@@ -12,8 +12,8 @@ $ npm run dev
 http://localhost:8080
 ```
 
-Next, visit [http://localhost:8080](http://localhost:8080) and you should be up and
-running. Fire up your editor and start hacking.
+Next, visit [localhost:8080][localhost] and you should be up and running. Fire up your
+editor and start hacking.
 
 Let's open up `src/App.js` and change it to the following:
 
@@ -101,3 +101,5 @@ export default class Layout {
 
 > **Note:** Here we're saving the `_header` and `_footer` properties as constant nodes.
 > However, we can easily extract them to their own components later.
+
+[localhost]: http://localhost:8080 "http://localhost:8080"

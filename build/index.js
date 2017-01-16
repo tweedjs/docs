@@ -104,6 +104,7 @@ function compileMarkdown (source) {
   renderer.codespan = codeSpan
 
   const html = marked(source, { renderer })
+    .replace('<a href="http', '<a target="_blank" href="http')
 
   return { html, examples }
 }

@@ -59,7 +59,7 @@ class World {
 }
 ---
 class Hello implements NodeFactory {
-  private _world = new World()
+  private readonly _world = new World()
 
   render (): Node {
     return <h1>Hello {this._world}</h1>

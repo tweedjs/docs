@@ -60,6 +60,13 @@
           },
           "slug": "dev-workflow",
           "url": "https://tweedjs.github.io/docs/getting-started/dev-workflow.json"
+        },
+        {
+          "headers": {
+            "title": "Deployment"
+          },
+          "slug": "deployment",
+          "url": "https://tweedjs.github.io/docs/getting-started/deployment.json"
         }
       ]
     },

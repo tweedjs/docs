@@ -6,7 +6,7 @@ install workflow from scratch to browser looks like this:
 
 ```shell
 $ tweed new my-project
-Creating my-project...
+Crafting my-project...
 $ cd my-project
 $ npm run dev
 http://localhost:8080

@@ -102,4 +102,8 @@ export default class Layout {
 > **Note:** Here we're saving the `_header` and `_footer` properties as constant nodes.
 > However, we can easily extract them to their own components later.
 
+You can read more about _how_ you might want to build a Tweed application in the
+[Patterns][patterns] series.
+
 [localhost]: http://localhost:8080 "http://localhost:8080"
+[patterns]: #/docs/patterns "Patterns"

@@ -44,14 +44,33 @@ export default class MyComponent {
 }
 ```
 
+If you want to generate a component in a file within a directory structure, you can
+describe the path from the `src` directory with a period separating the names. You can
+also use a slash or a backslash if that's more natural to you:
+
+```shell
+$ tweed generate deep.namespace.MyClass
+Generated src\deep\namespace\MyClass.tsx
+```
+
+You may follow a different file naming convention, but the command will figure out what
+the class should be called anyway.
+
 If you want to generate a corresponding unit test with the module, just use the flag
 `--test` or `-t`.
+
+```shell
+$ tweed generate important_stuff.Namespace.my-class -t
+Generated src/important_stuff/Namespace/my-class.tsx # MyClass is generated
+Generated __tests__/important_stuff/Namespace/my-class.test.tsx
+```
 
 > **Note:** The `generate` command will look at your environment to figure out things like
 > what compiler you're using, and will generate code depending on that. If TypeScript is
 > used, a `.tsx` file will be generated instead of a `.js` file. Likewise, the test that
 > is generated if the `--test` flag is passed in will depend on what test framework you
-> have installed.
+> have installed. In the example above, Jest is installed, so `__tests__` and `*.test.*`
+> conventions are used. For Mocha, `test` and `*Test.*` is used.
 
 [mutations]: #/docs/quick-tour/mutations "Mutations"
 [yarn]: https://yarnpkg.com "Yarn Package Manager"

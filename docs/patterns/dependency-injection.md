@@ -227,15 +227,16 @@ class Menu {
 }
 ```
 
-We have clearly define borders between these components, that can be managed so that
+We now have clearly defined borders between these components that can be managed, so that
 things don't break.
 
 ### Collaborators into Constructors, Data into Methods
 Because we're using classes instead of plain functions, we effectively have two different
-types of parameter lists: _constructor parameters_ and _method parameters_.
+types of parameter lists: _constructor parameters_ and _method parameters_. But when
+should you use which?
 
-In other words, what's the difference between `new Class(new Dep()).render()` and
-`new Class().render(new Dep())`?
+In other words, what's the difference between `new A(new B()).render()` and
+`new A().render(new B())` and when is it appropriate to use which one?
 
 The main thing to keep in mind here is: whoever chooses what to send to the constructor
 also knows what the class is. However, an existing object can be passed around, and
@@ -254,7 +255,8 @@ class ScrollableList {
     return Object.assign({},
       this._listStyle.style,
       {
-        height: this._height
+        height: this._height,
+        overflowY: 'scroll'
       }
     )
   }
@@ -281,7 +283,8 @@ class ScrollableList {
     return Object.assign({},
       this._listStyle.style,
       {
-        height: this._height
+        height: this._height,
+        overflowY: 'scroll'
       }
     )
   }
@@ -297,11 +300,12 @@ class ScrollableList {
 ```
 
 The `ListStyle` passed in determines how the `ScrollableList` looks: it's a collaborator.
-What list items to show, though, can be different any time. It doesn't matter. They're
+What list items to show, though, can be different every time. It doesn't matter. They're
 just data.
 
-In fact, that `Menu` example from before could with good reason be designed like this
-instead:
+In fact, since items in a list most likely is best described as data, that `Menu` example
+from before could with good reason be designed so that the menu items are passed into the
+render method instead of the constructor:
 
 ```javascript
 const menu = new Menu()
@@ -326,18 +330,18 @@ const menu = new Menu(router)
 menu.render()
 ```
 
-It's up to you to decide whether to call something a collaborator or data. This is one of
-the challenges of [OOD][ood].
+It's up to you to decide whether to call something a collaborator or data. This
+distinction is one of the challenges of [OOD][ood].
 
 ### Stateful Collaborators
 We now have to tackle another issue. Consider this class:
 
 ```tweed
-class Todos {
+class TodoList {
   @mutating items = []
 }
 ---
-class Todos {
+class TodoList {
   @mutating items: Todo[] = []
 }
 ```
@@ -345,18 +349,18 @@ class Todos {
 Is this a collaborator or data?
 
 We can take different approaches here. Traditional OOP developers might suggest to inject
-an instance of `Todos` in the constructor of any component that uses the data:
+an instance of `TodoList` in the constructor of any component that uses the data:
 
 ```tweed
 class TodoListView {
-  constructor (todos) {
-    this._todos = todos
+  constructor (todoList) {
+    this._todoList = todoList
   }
 
   render () {
     return (
       <ul>
-        {this._todos.items.map((todo) =>
+        {this._todoList.items.map((todo) =>
           <li>{todo}</li>
         )}
       </ul>
@@ -366,13 +370,13 @@ class TodoListView {
 ---
 class TodoListView {
   constructor (
-    private readonly _todos: Todos
+    private readonly _todoList: TodoList
   ) {}
 
   render () {
     return (
       <ul>
-        {this._todos.items.map((todo) =>
+        {this._todoList.items.map((todo) =>
           <li>{todo}</li>
         )}
       </ul>
@@ -413,31 +417,31 @@ class TodoListView {
 }
 ```
 
-Here we've removed the dependency on the state container `Todos` completely. Instead we
+Here we've removed the dependency on the state container `TodoList` completely. Instead we
 only rely on the data to be passed into the `render()` method.
 
 This would require another component like this one:
 
 ```tweed
 class TodoListContainer {
-  constructor (view, todos) {
-    this._view = view
-    this._todos = todos
+  constructor (todoListView, todoList) {
+    this._todoListView = todoListView
+    this._todoList = todoList
   }
 
   render () {
-    return this._view.render(this._todos.items)
+    return this._todoListView.render(this._todoList.items)
   }
 }
 ---
 class TodoListContainer {
   constructor (
-    private readonly _view: TodoListView
-    private readonly _todos: Todos
+    private readonly _todoListView: TodoListView
+    private readonly _todoList: TodoList
   ) {}
 
   render () {
-    return this._view.render(this._todos.items)
+    return this._todoListView.render(this._todoList.items)
   }
 }
 ```

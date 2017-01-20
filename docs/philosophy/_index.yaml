@@ -4,3 +4,4 @@ description: >
   this series discusses some ideas about the architecture of a Tweed app. WIP.
 subsections:
   - object-oriented-design
+  - functional-reactive-programming

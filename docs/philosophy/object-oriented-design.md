@@ -132,7 +132,7 @@ class Megaphone implements CanPrint {
   ) {}
 
   printAMessage (): void {
-    console.log(command.toUpperCase() + '!!!')
+    console.log(this.command.toUpperCase() + '!!!')
   }
 }
 

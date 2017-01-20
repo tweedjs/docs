@@ -95,6 +95,13 @@
           },
           "slug": "object-oriented-design",
           "url": "https://tweedjs.github.io/docs/philosophy/object-oriented-design.json"
+        },
+        {
+          "headers": {
+            "title": "Functional Reactive Programming"
+          },
+          "slug": "functional-reactive-programming",
+          "url": "https://tweedjs.github.io/docs/philosophy/functional-reactive-programming.json"
         }
       ]
     }

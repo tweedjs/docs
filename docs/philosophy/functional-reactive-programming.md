@@ -34,7 +34,7 @@ i = i + 2
 ```
 
 Here, we repeatedly change the _value_ of the variable `i`. But we never change any data,
-because even though we say that `i` it _equal_ to `0`, and that `i` it later changed to be
+because even though we say that `i` is _equal_ to `0`, and that `i` is later changed to be
 `1`, we wouldn't expect `0` to now be _equal_ to `1`.
 
 Variables that behave like this stem from the hardware centric tradition, where data

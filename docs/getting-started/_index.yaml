@@ -6,4 +6,5 @@ subsections:
   - installation
   - cli
   - dev-workflow
+  - ssr
   - deployment

@@ -198,7 +198,7 @@ languages.tweed['class-name'] = [{
 }]
 
 languages.tweed.plain = [{
-  pattern: /(<([a-z-]+).*?(?!\/).>)[^<]*?(?=<\/\2)/,
+  pattern: /(>)[^>]*?(?=<\/)/,
   lookbehind: true,
   greedy: true
 }]

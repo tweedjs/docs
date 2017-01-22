@@ -130,7 +130,7 @@ class InputField {
       <div>
         <input
           value={this.value}
-          on-input={(event) =>{
+          on-input={(event) => {
             this.value = event.target.value
           }}
         />

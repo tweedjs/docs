@@ -197,11 +197,6 @@ languages.tweed['class-name'] = [{
   pattern: /\b[A-Z]\w*\s*(?=\()/
 }]
 
-languages.tweed.plain = [{
-  pattern: /(>)[^>]*?(?=<\/)/,
-  lookbehind: true
-}]
-
 languages.tweed.annotation = {
   pattern: /@[\w.]+/
 }

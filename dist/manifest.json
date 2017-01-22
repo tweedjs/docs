@@ -63,6 +63,13 @@
         },
         {
           "headers": {
+            "title": "Server Side Rendering"
+          },
+          "slug": "ssr",
+          "url": "https://tweedjs.github.io/docs/getting-started/ssr.json"
+        },
+        {
+          "headers": {
             "title": "Deployment"
           },
           "slug": "deployment",

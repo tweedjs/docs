@@ -191,28 +191,24 @@ const keywords = [
 languages.tweed.keyword = new RegExp(`\\b(${keywords.join('|')})\\b`)
 
 languages.tweed['class-name'] = [{
-  pattern: /(:|class|interface|type|implements|extends|instanceof|new|<|import|{|,)\s*\b[A-Z]\w*/,
+  pattern: /(:|default|class|interface|type|implements|extends|instanceof|new|<|import|{|,)\s*\b[A-Z]\w*/,
   lookbehind: true
 }, {
   pattern: /\b[A-Z]\w*\s*(?=\()/
 }]
 
 languages.tweed.plain = [{
-  pattern: /(<(?!\/)[^>{]+>)(?:(?!<\/)[^<{])*/,
-  lookbehind: true,
-  greedy: true
-}, {
-  pattern: /(\}>)(?:(?!<\/)[^<{])*/,
-  lookbehind: true,
-  greedy: true
-}, {
-  pattern: /(})[^}{]*(?=<\/)/,
+  pattern: /(<([a-z-]+).*?(?!\/).>).*?(?=<\/\2)/,
   lookbehind: true,
   greedy: true
 }]
 
 languages.tweed.annotation = {
   pattern: /@[\w.]+/
+}
+
+languages.tweed.function = {
+  pattern: /[a-z]+\s*(?=\()/i
 }
 
 function codeBlock (code, language) {

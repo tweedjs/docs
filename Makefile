@@ -1,3 +1,5 @@
+DATE=$(shell date +"%Y-%m-%d %H:%M:%S")
+
 .PHONY: build
 build:
 	node --harmony_async_await build

@@ -111,6 +111,34 @@
           "url": "https://tweedjs.github.io/docs/philosophy/functional-reactive-programming.json"
         }
       ]
+    },
+    {
+      "name": "Ecosystem",
+      "slug": "ecosystem",
+      "description": "A tour of the official Tweed library ecosystem, including libraries for Routing, Automatic Dependency Injection and State Management. WIP",
+      "subsections": [
+        {
+          "headers": {
+            "title": "Tweed Router"
+          },
+          "slug": "router",
+          "url": "https://tweedjs.github.io/docs/ecosystem/router.json"
+        },
+        {
+          "headers": {
+            "title": "Tweed Inject"
+          },
+          "slug": "inject",
+          "url": "https://tweedjs.github.io/docs/ecosystem/inject.json"
+        },
+        {
+          "headers": {
+            "title": "Harris – State Manager"
+          },
+          "slug": "harris",
+          "url": "https://tweedjs.github.io/docs/ecosystem/harris.json"
+        }
+      ]
     }
   ]
 }

@@ -11,20 +11,20 @@ So switching out part of the page when a button is pressed is simple enough:
 import { mutating, Node } from 'tweed'
 
 const pages = {
-  HOME: <div>Home Page</div>,
-  ABOUT: <div>About Page</div>
+  home: <div>Home Page</div>,
+  about: <div>About Page</div>
 }
 
 export default class Main {
-  @mutating _page = pages.HOME
+  @mutating _page = pages.home
 
   render () {
     return (
       <div>
-        <button on-click={() => this._page = pages.HOME}>
+        <button on-click={() => this._page = pages.home}>
           Go to Home Page
         </button>
-        <button on-click={() => this._page = pages.HOME}>
+        <button on-click={() => this._page = pages.about}>
           Go to About Page
         </button>
 
@@ -37,20 +37,20 @@ export default class Main {
 import { mutating, Node } from 'tweed'
 
 const pages = {
-  HOME: <div>Home Page</div>,
-  ABOUT: <div>About Page</div>
+  home: <div>Home Page</div>,
+  about: <div>About Page</div>
 }
 
 export default class Main {
-  @mutating private _page = pages.HOME
+  @mutating private _page = pages.home
 
   render (): Node {
     return (
       <div>
-        <button on-click={() => this._page = pages.HOME}>
+        <button on-click={() => this._page = pages.home}>
           Go to Home Page
         </button>
-        <button on-click={() => this._page = pages.HOME}>
+        <button on-click={() => this._page = pages.about}>
           Go to About Page
         </button>
 

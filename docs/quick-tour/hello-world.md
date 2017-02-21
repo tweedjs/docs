@@ -3,7 +3,7 @@ Title: Hello World
 Armed with the knowledge of how JSX works, let's look at the Hello World example of a
 Tweed application:
 
-```tweed
+```tweed+fiddle
 import { Node } from 'tweed'
 import render from 'tweed/render/dom'
 
@@ -43,7 +43,7 @@ component will replace.
 ### Delegating
 If you want to add another component, we need an instance of that component:
 
-```tweed
+```tweed+fiddle
 class Hello {
   _world = new World()
 

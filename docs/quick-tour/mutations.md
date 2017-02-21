@@ -31,7 +31,7 @@ class Stateful {
 By using the `@mutating` [decorator][decorators-proposal], we tell Tweed to track the
 state of the property, and rerender the UI whenever it changes.
 
-```tweed
+```tweed+fiddle
 class Counter {
   @mutating _count = 0
 
@@ -65,7 +65,7 @@ class Counter {
 A more realistic example is an alert box that can be hidden. Consider the different states
 of that component—_open_ and _closed_:
 
-```tweed
+```tweed+fiddle
 class AlertBox {
   @mutating _isOpen = true
   _message = 'This is an alert'
@@ -121,7 +121,7 @@ user updates the contents of the field, the data model changes.
 Tweed doesn't take this approach, for good reason. Instead, you will have to configure
 event listeners on those inputs, and manually write the updates to the data.
 
-```tweed
+```tweed+fiddle
 class InputField {
   @mutating value = ''
 

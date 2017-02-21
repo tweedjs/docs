@@ -88,12 +88,13 @@ function compileMarkdown (source) {
   const renderer = new marked.Renderer()
 
   renderer.code = function (code, language) {
-    if (language === 'tweed') {
+    if (/tweed/.test(language)) {
       const [ js, ts ] = code.split(/\s*---\s*/)
 
       examples.push({
         javascript: codeBlock(js, 'javascript'),
-        typescript: codeBlock(ts, 'typescript')
+        typescript: codeBlock(ts, 'typescript'),
+        fiddle: /tweed\+fiddle/.test(language)
       })
 
       return '<example-slot></example-slot>'

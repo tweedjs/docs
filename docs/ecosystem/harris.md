@@ -55,7 +55,7 @@ Next, we create an `Update`, which represents the transition from one state to a
 our example, the model consists of a simple `number`.
 
 ```tweed
-const counterUpdate = (state, action) => {
+function counterUpdate (state, action) {
   switch (action.type) {
     case 'Increment':
       return state + 1
@@ -177,7 +177,7 @@ class DecrementAction {
   type = 'Decrement'
 }
 
-const counterUpdate = (state, action) => {
+function counterUpdate (state, action) {
   switch (action.type) {
     case 'Increment':
       return state + 1
@@ -287,7 +287,7 @@ class AddAction {
   }
 }
 
-const counterUpdatePatch = (state, action) => {
+function counterUpdatePatch (state, action) {
   switch (action.type) {
     case 'Add':
       return state + action.amount
@@ -338,7 +338,7 @@ class SetFilterTextAction {
   }
 }
 
-const filterUpdate = (state, action) => {
+function filterUpdate (state, action) {
   switch (action.type) {
     case 'SetFilterText':
       return action.text

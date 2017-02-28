@@ -203,7 +203,7 @@ languages.tweed.annotation = {
 }
 
 languages.tweed.function = {
-  pattern: /[a-z]+\s*(?=\()/i
+  pattern: /[a-z]+\s*?(?=\()|[a-z]+\s*?(?==\s*\(.*\)\s*=>)/i
 }
 
 function codeBlock (code, language) {

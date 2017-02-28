@@ -451,5 +451,9 @@ view be completely stateless and immutable and the mutable state be completely s
 from the view. At this point we're approaching a [Flux][flux]-like architecture, which you
 might like.
 
+> **Note:** You may also want to check out [Harris][harris], a state manager with first
+> class support for Tweed.
+
 [ood]: #/docs/philosophy/object-oriented-design "Object Oriented Design"
 [flux]: https://facebook.github.io/flux "Flux Architecture"
+[ood]: #/docs/ecosystem/harris "Harris – State Manager"

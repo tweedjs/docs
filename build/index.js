@@ -67,7 +67,7 @@ function url (path) {
 async function parse (path) {
   const contents = await readFile(path)
   const [ metadata ] = /^(\w+:\s*.+\n)*/.exec(contents)
-  const markdown = contents.slice(metadata.length).toString()
+  const markdown = contents.toString().slice(metadata.length)
 
   const headers = metadata
     .split('\n')

@@ -10,28 +10,28 @@
             "title": "Welcome to Tweed"
           },
           "slug": "welcome",
-          "url": "https://tweedjs.github.io/docs/quick-tour/welcome.json"
+          "url": "/docs/quick-tour/welcome.json"
         },
         {
           "headers": {
             "title": "JSX and Virtual DOM"
           },
           "slug": "jsx-and-vdom",
-          "url": "https://tweedjs.github.io/docs/quick-tour/jsx-and-vdom.json"
+          "url": "/docs/quick-tour/jsx-and-vdom.json"
         },
         {
           "headers": {
             "title": "Hello World"
           },
           "slug": "hello-world",
-          "url": "https://tweedjs.github.io/docs/quick-tour/hello-world.json"
+          "url": "/docs/quick-tour/hello-world.json"
         },
         {
           "headers": {
             "title": "Mutations"
           },
           "slug": "mutations",
-          "url": "https://tweedjs.github.io/docs/quick-tour/mutations.json"
+          "url": "/docs/quick-tour/mutations.json"
         }
       ]
     },
@@ -45,35 +45,35 @@
             "title": "Installation"
           },
           "slug": "installation",
-          "url": "https://tweedjs.github.io/docs/getting-started/installation.json"
+          "url": "/docs/getting-started/installation.json"
         },
         {
           "headers": {
             "title": "Tweed CLI"
           },
           "slug": "cli",
-          "url": "https://tweedjs.github.io/docs/getting-started/cli.json"
+          "url": "/docs/getting-started/cli.json"
         },
         {
           "headers": {
             "title": "Development Workflow"
           },
           "slug": "dev-workflow",
-          "url": "https://tweedjs.github.io/docs/getting-started/dev-workflow.json"
+          "url": "/docs/getting-started/dev-workflow.json"
         },
         {
           "headers": {
             "title": "Server Side Rendering"
           },
           "slug": "ssr",
-          "url": "https://tweedjs.github.io/docs/getting-started/ssr.json"
+          "url": "/docs/getting-started/ssr.json"
         },
         {
           "headers": {
             "title": "Deployment"
           },
           "slug": "deployment",
-          "url": "https://tweedjs.github.io/docs/getting-started/deployment.json"
+          "url": "/docs/getting-started/deployment.json"
         }
       ]
     },
@@ -87,7 +87,7 @@
             "title": "Dependency Injection"
           },
           "slug": "dependency-injection",
-          "url": "https://tweedjs.github.io/docs/patterns/dependency-injection.json"
+          "url": "/docs/patterns/dependency-injection.json"
         }
       ]
     },
@@ -101,14 +101,14 @@
             "title": "Object Oriented Design"
           },
           "slug": "object-oriented-design",
-          "url": "https://tweedjs.github.io/docs/philosophy/object-oriented-design.json"
+          "url": "/docs/philosophy/object-oriented-design.json"
         },
         {
           "headers": {
             "title": "Functional Reactive Programming"
           },
           "slug": "functional-reactive-programming",
-          "url": "https://tweedjs.github.io/docs/philosophy/functional-reactive-programming.json"
+          "url": "/docs/philosophy/functional-reactive-programming.json"
         }
       ]
     },
@@ -122,21 +122,21 @@
             "title": "Tweed Router"
           },
           "slug": "router",
-          "url": "https://tweedjs.github.io/docs/ecosystem/router.json"
+          "url": "/docs/ecosystem/router.json"
         },
         {
           "headers": {
             "title": "Tweed Inject"
           },
           "slug": "inject",
-          "url": "https://tweedjs.github.io/docs/ecosystem/inject.json"
+          "url": "/docs/ecosystem/inject.json"
         },
         {
           "headers": {
             "title": "Harris – State Manager"
           },
           "slug": "harris",
-          "url": "https://tweedjs.github.io/docs/ecosystem/harris.json"
+          "url": "/docs/ecosystem/harris.json"
         }
       ]
     }

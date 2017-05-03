@@ -61,7 +61,7 @@ async function main () {
 }
 
 function url (path) {
-  return path.replace(dirDist, 'https://tweedjs.github.io/docs')
+  return path.replace(dirDist, '/docs')
 }
 
 async function parse (path) {

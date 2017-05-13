@@ -8,7 +8,7 @@ pages are all handled by the JavaScript within the browser document.
 So switching out part of the page when a button is pressed is simple enough:
 
 ```tweed
-import { mutating, Node } from 'tweed'
+import { mutating, VirtualNode } from 'tweed'
 
 const pages = {
   home: <div>Home Page</div>,
@@ -34,7 +34,7 @@ export default class Main {
   }
 }
 ---
-import { mutating, Node } from 'tweed'
+import { mutating, VirtualNode } from 'tweed'
 
 const pages = {
   home: <div>Home Page</div>,
@@ -44,7 +44,7 @@ const pages = {
 export default class Main {
   @mutating private _page = pages.home
 
-  render (): Node {
+  render (): VirtualNode {
     return (
       <div>
         <button on-click={() => this._page = pages.home}>
@@ -80,7 +80,7 @@ $ npm install --save tweed-router
 First, define your routes:
 
 ```tweed
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 
 const routes = {
   '/' () {
@@ -92,7 +92,7 @@ const routes = {
   }
 }
 ---
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 import { Routes } from 'tweed-router'
 
 const routes: Routes = {

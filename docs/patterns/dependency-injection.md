@@ -75,10 +75,10 @@ object with a `render()` method. If you're using TypeScript, you can formalize t
 establishing an interface that the object must satisfy:
 
 ```typescript
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 
 interface BInterface {
-  render (): Node
+  render (): VirtualNode
 }
 
 export default BInterface
@@ -214,7 +214,7 @@ argument should look like this:
 interface LayoutDependencies {
   title: string
   menu: Menu
-  page: Node
+  page: VirtualNode
 }
 ```
 
@@ -289,10 +289,10 @@ class ScrollableList {
     )
   }
 
-  render (items: Node[]): Node {
+  render (items: VirtualNode[]): VirtualNode {
     return (
       <ul style={this._style}>
-        {items.map((i: Node) => <li>{i}</li>)}
+        {items.map((i: VirtualNode) => <li>{i}</li>)}
       </ul>
     )
   }

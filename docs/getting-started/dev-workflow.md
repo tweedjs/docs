@@ -18,7 +18,7 @@ editor and start hacking.
 Let's open up `src/App.js` and change it to the following:
 
 ```tweed
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 import Layout from './Layout'
 
 export default class App {
@@ -33,13 +33,13 @@ export default class App {
   }
 }
 ---
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 import Layout from './Layout'
 
 export default class App {
   private readonly _layout = new Layout()
 
-  render (): Node {
+  render (): VirtualNode {
     return this._layout.render(
       <div>
         App Component
@@ -60,7 +60,7 @@ We can then edit the layout file and let it wrap the content being sent into its
 `render()` method.
 
 ```tweed
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 
 export default class Layout {
   _header = <header>Header</header>
@@ -79,13 +79,13 @@ export default class Layout {
   }
 }
 ---
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 
 export default class Layout {
   private readonly _header = <header>Header</header>
   private readonly _footer = <footer>Footer</footer>
 
-  render (content: Node): Node {
+  render (content: VirtualNode): VirtualNode {
     return (
       <div>
         {this._header}

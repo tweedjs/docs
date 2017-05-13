@@ -102,7 +102,7 @@ class Timer {
     }, 1000)
   }
 
-  render (): Node {
+  render (): VirtualNode {
     return (
       <div>{this.now.toString()}</div>
     )

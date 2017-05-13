@@ -35,7 +35,7 @@ The `generate` command assumes that you're following the convention of one main 
 file, so in the example above the file will contain the following:
 
 ```javascript
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 
 export default class MyComponent {
   render () {

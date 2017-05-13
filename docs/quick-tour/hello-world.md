@@ -4,7 +4,7 @@ Armed with the knowledge of how JSX works, let's look at the Hello World example
 Tweed application:
 
 ```tweed+fiddle
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 import render from 'tweed/render/dom'
 
 class Hello {
@@ -15,11 +15,11 @@ class Hello {
 
 render(new Hello(), document.querySelector('#app'))
 ---
-import { Node, NodeFactory } from 'tweed'
+import { VirtualNode, NodeFactory } from 'tweed'
 import render from 'tweed/render/dom'
 
 class Hello implements NodeFactory {
-  render (): Node {
+  render (): VirtualNode {
     return <h1>Hello World</h1>
   }
 }
@@ -27,7 +27,7 @@ class Hello implements NodeFactory {
 render(new Hello(), document.querySelector('#app'))
 ```
 
-So let's break this down. First, we import the `Node` function, as well as the `render`
+So let's break this down. First, we import the `VirtualNode` function, as well as the `render`
 function, which will mount the Tweed app in the browser.
 
 Next, we declare a class with a `render()` _method_. In TypeScript, there's an interface
@@ -61,13 +61,13 @@ class World {
 class Hello implements NodeFactory {
   private readonly _world = new World()
 
-  render (): Node {
+  render (): VirtualNode {
     return <h1>Hello {this._world}</h1>
   }
 }
 
 class World {
-  render (): Node {
+  render (): VirtualNode {
     return <span>World</span>
   }
 }

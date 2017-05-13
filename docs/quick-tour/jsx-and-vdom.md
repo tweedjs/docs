@@ -12,17 +12,17 @@ example, we can save the result of a JSX expression to a variable. In fact, afte
 compilation phase, the above code will be a function call, looking like this:
 
 ```javascript
-const hello = Node('h1', null, 'Hello World')
+const hello = VirtualNode('h1', null, 'Hello World')
 ```
 
-That `Node` function is supplied by Tweed. The first argument is the name of the element,
+That `VirtualNode` function is supplied by Tweed. The first argument is the name of the element,
 which is an `H1` in our case. The second argument will be an object if we supply any
 attributes to the tag:
 
 ```javascript
 const hello = <h1 class='hello'>Hello World</h1>
 // Compiles to
-const hello = Node('h1', { class: 'hello' }, 'Hello World')
+const hello = VirtualNode('h1', { class: 'hello' }, 'Hello World')
 ```
 
 All subsequent arguments represent the children of the element. Let's look at one more
@@ -36,8 +36,8 @@ const complexHello = (
 )
 // Compiles to
 const complexHello = (
-  Node('div', { class: 'wrapper' },
-    Node('h1', { class: 'heading' }, 'Hello World')
+  VirtualNode('div', { class: 'wrapper' },
+    VirtualNode('h1', { class: 'heading' }, 'Hello World')
   )
 )
 ```
@@ -70,19 +70,19 @@ const element = (
 > a self-closing tag (`<img />`). Elements that are not self-closing in HTML, like
 > `<div></div>` can still be self-closed in JSX.
 
-### The `Node` function
+### The `VirtualNode` function
 As mentioned above, JSX expressions are compiled to function calls to a function called
-`Node`. This function is supplied by Tweed, but not globally. That means it has to be
+`VirtualNode`. This function is supplied by Tweed, but not globally. That means it has to be
 imported at the top of every file that contains JSX:
 
 ```javascript
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 
 const pic = <img src='...' />
 ```
 
 > **Note:** If you're not worried about polluting the global scope, you can assign the
-> `Node` function to the global object in the entry point file. That way the function
+> `VirtualNode` function to the global object in the entry point file. That way the function
 > will be available in every file, making the import statements redundant.
 
 ### Object attributes

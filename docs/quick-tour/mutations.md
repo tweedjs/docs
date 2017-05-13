@@ -47,7 +47,7 @@ class Counter {
 class Counter {
   @mutating private _count = 0
 
-  render (): Node {
+  render (): VirtualNode {
     return (
       <button on-click={() => this._count++}>
         You have pressed this button {this._count} times
@@ -91,7 +91,7 @@ class AlertBox {
   @mutating private _isOpen = true
   readonly private _message = 'This is an alert'
 
-  render (): Node {
+  render (): VirtualNode {
     if (!this._isOpen) {
       return <div>Closed</div>
     }
@@ -143,7 +143,7 @@ class InputField {
 class InputField {
   @mutating value = ''
 
-  render (): Node {
+  render (): VirtualNode {
     return (
       <div>
         <input

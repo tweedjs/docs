@@ -35,7 +35,7 @@ to use Tweed directly in the browser:
       }
     }
 
-    return Tweed.Node('button', attributes,
+    return Tweed.VirtualNode('button', attributes,
       'You have pressed this button ', this.count, ' times'
     )
   }

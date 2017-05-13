@@ -112,7 +112,7 @@ directly. A Harris Store uses the `@mutating` decorator to tell Tweed to rerende
 state is updated.
 
 ```tweed
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 
 class CounterView {
   constructor (counterStore) {
@@ -136,7 +136,7 @@ class CounterView {
   }
 }
 ---
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 import { Store } from 'harris'
 
 class CounterView {
@@ -150,7 +150,7 @@ class CounterView {
   private _decrement = () =>
     this._counterStore.dispatch(new DecrementAction())
 
-  render (): Node {
+  render (): VirtualNode {
     return (
       <span>
         <button on-click={this._increment}>+</button>
@@ -165,7 +165,7 @@ class CounterView {
 Put together, a working Tweed app could look like this:
 
 ```tweed
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 import render from 'tweed/render/dom'
 import { Store } from 'harris'
 
@@ -215,7 +215,7 @@ const counterStore = new Store(initialState, counterUpdate)
 
 render(new CounterView(counterStore), document.querySelector('#app'))
 ---
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 import render from 'tweed/render/dom'
 import { Update, Store } from 'harris'
 
@@ -253,7 +253,7 @@ class CounterView {
   private _decrement = () =>
     this._counterStore.dispatch(new DecrementAction())
 
-  render (): Node {
+  render (): VirtualNode {
     return (
       <span>
         <button on-click={this._increment}>+</button>

@@ -11,4 +11,4 @@ commit: build
 
 .PHONY: push
 push: commit
-	git push origin `git subtree split --prefix dist gh-pages`:gh-pages --force
+	git push --force origin `git subtree split --prefix dist`:gh-pages

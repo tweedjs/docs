@@ -27,6 +27,10 @@ application change the properties of a god object, they dispatch actions to an o
 state container which is preconfigured to support those actions, taking the data from its
 previous state to the next.
 
+```shell
+$ npm install --save harris
+```
+
 Imagine a simple counter, with `+` and `–` buttons. What actions should they dispatch?
 
 ```tweed
